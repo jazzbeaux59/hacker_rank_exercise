@@ -1,16 +1,13 @@
 #!/bin/python3
 
 def is_leap(year):
-    leap = False
+    leap = ""
 
-    if year % 4 == 0:
-        if year % 100 != 0 and year % 400 == 0:
-            leap = True
-        else:
-            leap = False
+    if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
+        leap = True
     else:
         leap = False
     return leap
 
-year = 2100
+year = 1992
 print(is_leap(year))
